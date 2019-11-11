@@ -1,30 +1,24 @@
-public class Bubblesort {
-//function to perform bubble sort
 
-  void bubblesort(int ar[])
-	  {
-	 int n=ar.length; 
-	
-  for(int i=0;i<n-1;i++)
-	
-  {
+public class Bubblesort {
+
+//Function to perform bubble sort
+	void bubblesort(int ar[])
+	{
+		int n=ar.length;
+		for(int i=0;i<n-1;i++)
+		{
 			for(int j=0;j<n-i-1;j++)
-	
-    {
+			{
 				if(ar[j]>ar[j+1])
-		
-      {
+				{
 					int temp=ar[j];
 					ar[j]=ar[j+1];
 					ar[j+1]=temp;
-			
-      }
-			
-    }
-		
-  }
-}
-	//function to print the array elements
+				}
+			}
+		}
+	}
+	//Function to print the elements of array
 	void printarray(int ar[])
 	{
 		int n=ar.length;
@@ -36,19 +30,18 @@ public class Bubblesort {
 		}
 	}
 	
-	
+	//Main method
 	public static void main(String args[])
 	{
-		Bubblesort ob = new Bubblesort();//creating an object of the class
-    
-    int ar[]= {64,34,25,12,22,11,90};
-		
-    ob.bubblesort(ar);
-		
-    System.out.println("Sorted array");
-		
-    ob.printarray(ar);
+		Bubblesort ob = new Bubblesort();
+		int ar[]= {64,34,25,12,22,11,90};
+		ob.bubblesort(ar);
+		System.out.println("Sorted array");
+		ob.printarray(ar);
 		
 	}
+	
+	
+	
 	
 }
